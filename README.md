@@ -1,1 +1,1 @@
-# js-gb
+# Learning repository JavaScript GeekBrains
