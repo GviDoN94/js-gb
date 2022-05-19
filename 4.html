@@ -30,8 +30,55 @@
 -->
 <script>
   "use strict";
+  /*
+  * Функция складывает два переданных числа.
+  * @param {number} num1 Первое число.
+  * @param {number} num2 Второе число.
+  * @return {number} Вернет число, результат суммы двух чисел.
+  */
+ 
+  function sumNum(num1, num2) {
+    return num1 + num2;
+  }
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  // Надеюсь задание я понил правильно.
+  /*
+  * Функция вычитает из большего переданного числа меньшее.
+  * @param {number} num1 Первое число.
+  * @param {number} num2 Второе число.
+  * @return {number} Вернет число, результат разницы двух чисел.
+  */
+  function differenceNum(num1, num2) {
+    if (num1 < num2) {
+      return num2 - num1;
+    }
+    return num1 - num2;
+  }
+
+    function multiplicationNum(num1, num2) {
+      return num1 * num2;
+    }
+
+  // function divisionNum(num1, num2) {
+  //   return num1 / num2;
+  // }
+
+  /*
+  * Функция умножает два переданных числа.
+  * @param {number} num1 Первое число.
+  * @param {number} num2 Второе число.
+  * @return {number} Вернет число, результат произведения двух чисел.
+  */
+  const multiplicationNum = (num1, num2) => num1 * num2;
+
+  /*
+  * Функция делит два переданных числа.
+  * @param {number} num1 Первое число.
+  * @param {number} num2 Второе число.
+  * @return {number} Вернет число, результат деления двух чисел.
+  */
+  const divisionNum = (num1, num2) => num1 / num2;
+
 </script>
 </body>
 </html>
