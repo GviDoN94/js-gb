@@ -20,8 +20,18 @@
 -->
 <script>
   "use strict";
+  
+  const a = +prompt('Введите первое число');
+  const b = +prompt('Введите второе число');
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  if (a > 0 && b > 0) {
+    console.log(a - b);
+  } else if (a < 0 && b < 0) {
+    console.log(a * b);
+  } else if (a < 0 || b < 0) {
+    console.log(a + b)
+  }
+
 </script>
 </body>
 </html>
