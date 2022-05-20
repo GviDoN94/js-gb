@@ -25,6 +25,15 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 <script>
   "use strict";
 
+  /*
+  * Функция возвращаtn одно из трех переданных в параметры слов (разные
+  * склонения)подходящее под число, которое передано первым аргументом.
+  * @param {number} count Число, количество вещей.
+  * @param {string} one Слово в 1-ом склонении, единственном числе.
+  * @param {string} two Слово во 2-ом склонении, множественном числе.
+  * @param {string} five Слово в 3-ем склонении, множественном числе.
+  * @returns {string} Вернет строку со словом в нужном склонении.
+  */
   function declinationOfNumber(count, one, two, five) {
     const units = count % 10;
     const tens = count % 100;
