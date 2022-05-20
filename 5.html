@@ -36,7 +36,7 @@ Infinity делать не нужно, однако, в случае если б
   * Функция складывает два переданных числа.
   * @param {number} num1 Первое число.
   * @param {number} num2 Второе число.
-  * @return {number} Вернет число, результат суммы двух чисел.
+  * @returns {number} Вернет число, результат суммы двух чисел.
   */
  
   function sumNum(num1, num2) {
@@ -48,7 +48,7 @@ Infinity делать не нужно, однако, в случае если б
   * Функция вычитает из большего переданного числа меньшее.
   * @param {number} num1 Первое число.
   * @param {number} num2 Второе число.
-  * @return {number} Вернет число, результат разницы двух чисел.
+  * @returns {number} Вернет число, результат разницы двух чисел.
   */
   function differenceNum(num1, num2) {
     if (num1 < num2) {
@@ -61,7 +61,7 @@ Infinity делать не нужно, однако, в случае если б
   * Функция умножает два переданных числа.
   * @param {number} num1 Первое число.
   * @param {number} num2 Второе число.
-  * @return {number} Вернет число, результат произведения двух чисел.
+  * @returns {number} Вернет число, результат произведения двух чисел.
   */
   const multiplicationNum = (num1, num2) => num1 * num2;
 
@@ -69,7 +69,7 @@ Infinity делать не нужно, однако, в случае если б
   * Функция делит два переданных числа.
   * @param {number} num1 Первое число.
   * @param {number} num2 Второе число.
-  * @return {number} Вернет число, результат деления двух чисел.
+  * @returns {number} Вернет число, частное двух чисел.
   */
   const divisionNum = (num1, num2) => num1 / num2;
 
@@ -77,9 +77,11 @@ Infinity делать не нужно, однако, в случае если б
   * Функция производит математическую операцию с двумя переданными числами.
   * @param {number} arg1 Первое число.
   * @param {number} arg2 Второе число.
-  * @return {number} Вернет число, результат математической операции с двумя
-    числами.
+  * @param {string} operation Оператор математической операции.
+  * @returns {number} Вернет число, результат математической операции с двумя
+  * числами. Если введены неверные параметры, вернет NaN.
   */
+
   function mathOperation(arg1, arg2, operation) {
     if (operation === '+') {
       return sumNum(arg1, arg2);
@@ -89,6 +91,8 @@ Infinity делать не нужно, однако, в случае если б
       return multiplicationNum(arg1, arg2);
     } else if (operation === '/') {
       return divisionNum(arg1, arg2);
+    } else {
+      return NaN;
     }
   }
 </script>
