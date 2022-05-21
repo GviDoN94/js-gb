@@ -29,7 +29,9 @@
     },
   ];
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  products.forEach((val) => {
+     return val.price = val.price - (val.price / 100 * 15);
+  });
 </script>
 </body>
 </html>
