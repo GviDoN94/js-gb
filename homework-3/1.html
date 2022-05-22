@@ -20,16 +20,12 @@
   "use strict";
 
   for (let i = 0; i <= 10; i++) {
-    const zero = ` - это ноль`;
-    const notEven = ` - нечетное число`;
-    const even = ` - четное число`;
-
     if (i === 0) {
-      console.log(i + zero);
+      console.log(`${i} - это ноль`);
     } else if (i % 2 === 1) {
-      console.log(i + notEven);
-    } else if (i % 2 === 0) {
-      console.log(i + even);
+      console.log(`${i}  - нечетное число`);
+    } else {
+      console.log(`${i}  - четное число`);
     }
   }
 </script>
