@@ -50,7 +50,31 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  function PostES5(name, textPost) {
+    this.name = name;
+    this.textPost = textPost;
+    this.date = new Date();
+  }
+
+  PostES5.prototype.edit = function (changedPost) {
+    this.textPost = changedPost;
+    this.date = new Date();
+  }
+
+  // ---------------------------------------------------------------
+
+  class PostES6 {
+    constructor(name, textPost) {
+      this.name = name;
+      this.textPost = textPost;
+      this.date = new Date();
+    }
+
+    edit(changedPost) {
+      this.textPost = changedPost;
+      this.date = new Date();
+    }
+  }
 </script>
 </body>
 </html>
