@@ -50,16 +50,27 @@
 <script>
   "use strict";
 
-  function PostES5(name, textPost) {
-    this.name = name;
-    this.textPost = textPost;
-    this.date = new Date();
-  }
+  // function PostES5(name, textPost) {
+  //   this.name = name;
+  //   this.textPost = textPost;
+  //   this.date = new Date();
+  // }
 
-  PostES5.prototype.edit = function (changedPost) {
-    this.textPost = changedPost;
-    this.date = new Date();
-  }
+  // PostES5.prototype.edit = function (changedPost) {
+  //   this.textPost = changedPost;
+  //   this.date = new Date();
+  // }
+
+  // function AttachedPostES5 (name, textPost) {
+  //   PostES5.call(this, name, textPost);
+  //     this.date = new Date();
+  //     this.highlighted = false;
+  // }
+
+  // AttachedPostES5.prototype.makeTextHighlighted = function () {
+  //   this.highlighted = true;
+  //   this.date = new Date();
+  // }
 
   // ---------------------------------------------------------------
 
@@ -72,6 +83,17 @@
 
     edit(changedPost) {
       this.textPost = changedPost;
+      this.date = new Date();
+    }
+  }
+
+  class AttachedPostES6 extends PostES6 {
+    constructor(name, textPost) {
+      super(name, textPost);
+    }
+
+    makeTextHighlighted() {
+      this.highlighted = true;
       this.date = new Date();
     }
   }
