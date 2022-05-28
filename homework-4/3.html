@@ -35,25 +35,23 @@
   * Функция конвертирует принимаемое целое положительное число от 0 до 1000 
   * на содержащееся в числе количесто единиц, десяков, сотен.
   * @param {number} number число.
-  * @returns {obj} При некоректно введеном числе или выходе за рамки диапазона
+  * @returns {object} При некоректно введеном числе или выходе за рамки диапазона
   * чисел выводит в конслоль ошибку и пустой объект.
-  * @returns {obj} Если числи коректное и в заданном диапазоне возвращает
+  * Если числи коректное и в заданном диапазоне возвращает
   * объект со значениями количества содержащихся в числе единиц, десятков и
   * сотен.
   */
   function getObjectNumbers(number) {
     if (!Number.isInteger(number) || number < 0 || number > 999) {
       console.error('Что то пошло не так!');
-      return  {};
+      return {};
     }
 
-    const objectNumbers = {};
-
-    objectNumbers.units = number % 10;
-    objectNumbers.dozens = Math.trunc(number / 10) % 10;
-    objectNumbers.hundreds = Math.trunc(number / 100) % 10;
-
-    return  objectNumbers;
+     return {
+      units: number % 10,
+      dozens: Math.trunc(number / 10) % 10,
+      hundreds: Math.trunc(number / 100) % 10,
+     };
   }
 </script>
 </body>
