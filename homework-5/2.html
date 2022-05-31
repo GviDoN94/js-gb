@@ -34,7 +34,7 @@
   свойство classList у элементов.
    */
   document.querySelectorAll('.dropdown-item').forEach(elem =>
-  elem.classList.add('.super-dropdown'));
+    elem.classList.add('.super-dropdown'));
 
   /*
   2. У элемента с классом btn необходимо убрать класс "btn-secondary", если он
@@ -60,15 +60,14 @@
   /*
   5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
    */
-  document.querySelector('#dropdownMenuButton')
-  .setAttribute('id', 'superDropdown');
+  document.querySelector('#dropdownMenuButton').id = 'superDropdown';
 
   /*
   6. Добавьте атрибут data-dd со значением 3 элементу у которого существует
   атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.
    */
   document.querySelector('[aria-labelledby="dropdownMenuButton"]')
-  .dataset.dd= '3';
+    .dataset.dd = '3';
 
   /*
   7. Удалите атрибут type у элемента с классом "dropdown-toggle".
@@ -81,10 +80,10 @@
   Вывод каждого атрибута и значений должен выглядеть следующим образом (пример):
   Атрибут "class" содержит значение "btn btn-secondary dropdown-toggle"
    */
-   const attributes = document.querySelector('.btn.dropdown-toggle').attributes;
+  const attributes = document.querySelector('.btn.dropdown-toggle').attributes;
 
-   for (const attr of attributes) {
-  console.log(`Атрибут ${attr.name} содержит значение ${attr.value}`);
+  for (const attr of attributes) {
+    console.log(`Атрибут ${attr.name} содержит значение ${attr.value}`);
   }
 
 </script>
