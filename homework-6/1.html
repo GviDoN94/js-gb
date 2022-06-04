@@ -60,9 +60,8 @@
       return;
     }
     event.target.textContent = 'Добавлено';
-    event.target.setAttribute('disabled', 'disabled');
-  }
-  );
+    event.target.disabled = true;
+  });
 
   /*
   4. Создайте полную (глубокую) копию элемента с классом product, измените в
@@ -72,12 +71,12 @@
   отображенный товар на странице на созданную копию. У данной копии также
   должен правильно работать код из 3-го задания.
    */
-    const copyProduct = document.querySelector('.product').cloneNode(true);
-    copyProduct.querySelector('.productName').textContent = 'Товар 4';
-    copyProduct.querySelector('img')
-      .src = 'https://picsum.photos/id/1080/200/300';
-    document.querySelector('.product:last-of-type')
-      .replaceWith(copyProduct);
+  const copyProduct = document.querySelector('.product').cloneNode(true);
+  copyProduct.querySelector('.productName').textContent = 'Товар 4';
+  copyProduct.querySelector('img')
+    .src = 'https://picsum.photos/id/1080/200/300';
+  document.querySelector('.product:last-of-type')
+    .replaceWith(copyProduct);
 
   /*
   5. По истечении 2 секунд с момента открытия страницы первый товар должен быть
@@ -86,7 +85,7 @@
   window.addEventListener('load', () => {
     const product = document.querySelector('.product');
     setTimeout(() => product.remove(), 2000);
-  })
+  });
 </script>
 </body>
 </html>

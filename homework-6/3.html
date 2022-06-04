@@ -41,34 +41,34 @@
   const stars = document.querySelectorAll('.fas');
 
   container.addEventListener('mouseover', event => {
-      if (!event.target.classList.contains('fas')) {
-        return;
-      }
+    if (!event.target.classList.contains('fas')) {
+      return;
+    }
 
-      for (const star of stars) {
-        star.classList.add('golden');
-        if (star === event.target) {
-          break;
-        }
+    for (const star of stars) {
+      star.classList.add('golden');
+      if (star === event.target) {
+         break;
       }
-    })
+    }
+  });
 
   /*
   2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
   задания должны быть удалены.
    */
    container.addEventListener('mouseout', event => {
-      if (!event.target.classList.contains('fas')) {
-        return;
-      }
+    if (!event.target.classList.contains('fas')) {
+      return;
+    }
 
-      for (const star of stars) {
-        star.classList.remove('golden');
-        if (star === event.target) {
-          break;
-        }
+    for (const star of stars) {
+      star.classList.remove('golden');
+      if (star === event.target) {
+        break;
       }
-    })
+    }
+  });
 
   /*
   3. Когда мы переводим мышь от одной звезды к другой, у нас могут мигать
@@ -83,7 +83,6 @@
   */
 
   container.style.fontSize = 0;
-
 
 </script>
 </body>
