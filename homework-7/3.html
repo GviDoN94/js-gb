@@ -28,8 +28,7 @@
     if (n < 1 || !Number.isInteger(n)) {
       return console.error('Нужно ввести целое, положительное число!');
     }
-    const num = [...'' + n].sort((a, b) => b - a).join('');
-    return +num;
+    return +[...'' + n].sort((a, b) => b - a).join('');
   }
 
   console.log(descendingOrder(42145)); // 54421

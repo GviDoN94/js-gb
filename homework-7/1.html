@@ -60,26 +60,20 @@
     H99: "Однако, программирование, в итоге, принесет свои плоды.",
   };
 
-  const navEl = document.querySelector('.nav');
-  const linkEls = navEl.querySelectorAll('.nav-link');
   const divEl = document.querySelector('.text');
+  let activeLink = document.querySelector('.active');
 
-  navEl.addEventListener('click', event => {
+  document.querySelector('.nav').addEventListener('click', event => {
     const link = event.target;
     if (!link.classList.contains('nav-link')) {
       return;
     }
     
-    linkEls.forEach(e => {
-      if (e === link && !e.classList.contains('active')) {
-        e.classList.add('active');
-      } else {
-        e.classList.remove('active');
-      }
-    });
+    activeLink.classList.remove('active');
+    link.classList.add('active');
+    activeLink = link;
     
-    const dataAttr = link.parentElement.dataset.text;
-    divEl.textContent = panelText[dataAttr];
+    divEl.textContent = panelText[link.parentElement.dataset.text];
   });
   /*
   2. Необходимо сделать так, чтобы при изменении input'а менялся и размер шрифта
@@ -90,7 +84,7 @@
   const inputEl = document.querySelector('input');
   const textEl = document.getElementById('inputDiv');
   
-  inputEl.value = 30;
+  inputEl.value = Number.parseInt(getComputedStyle(textEl).fontSize);
   
   inputEl.addEventListener('input', event => {
     textEl.style.fontSize = event.target.value + 'px';
