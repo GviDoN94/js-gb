@@ -29,7 +29,7 @@ function addToCart(id, name, price) {
     }
     basketObj[id].count++;
     basketCount.textContent = sumBasketCount();
-    basketTotalValue.textContent = sumBasketPrice();
+    basketTotalValue.textContent = sumBasketPrice().toFixed(2);
     addProductInBasket(id);
 }
 
@@ -56,10 +56,10 @@ function productInBasket(id) {
         <div>
             <span class="productCount">${basketObj[id].count}</span> шт.
         </div>
-        <div>$${basketObj[id].price}</div>
+        <div>$${basketObj[id].price.toFixed(2)}</div>
         <div>
-            $<span class="productTotalCount">${basketObj[id].price *
-            basketObj[id].count}</span>
+            $<span class="productTotalCount">${(basketObj[id].price *
+            basketObj[id].count).toFixed(2)}</span>
         </div>
     </div>
     `;
@@ -77,5 +77,5 @@ function addProductInBasket(id) {
     basketProduct.querySelector('.productCount')
         .textContent = basketObj[id].count;
     basketProduct.querySelector('.productTotalCount')
-        .textContent = basketObj[id].price * basketObj[id].count;
+        .textContent = (basketObj[id].price * basketObj[id].count).toFixed(2);
 }
